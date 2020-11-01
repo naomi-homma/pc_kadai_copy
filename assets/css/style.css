@@ -1,0 +1,363 @@
+/* ===== Foundation ===== */
+html {
+    font-size: 10px;
+}
+
+body{
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #444;
+    min-width: 1200px;
+}
+
+/* ===== Layout ===== */
+.l-container {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.l-main {
+    position: relative;
+}
+
+/* ===== Object ===== */
+/* ===== Component ===== */
+/* ----- Media ----- */
+.c-media {
+    position: relative;
+    margin-top: 11.5rem;
+}
+
+.c-media:first-child {
+    margin-top: 1rem;
+}
+
+.c-media__img-wrapper {
+    width: 73.9%;
+    height: auto;
+    object-fit: cover;
+}
+
+.c-media__img-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.c-media__body {
+    position: absolute;
+    width: 42.4%;
+    top: 12.59%;
+    right: 0;
+    background-color: #fff;
+    padding: 4.2rem 3.2rem 1.5rem;
+}
+
+.c-media__title {
+    font-size: 2.6rem;
+    line-height: 1.8;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 3.3rem;
+}
+
+.c-media__text {
+    font-size: 1.4rem;
+    line-height: 2.1;
+    font-weight: 300;
+}
+
+.c-media__sub-img-wrapper {
+    margin: 0 auto;
+}
+
+.c-media__sub-img-container {
+    margin: 1.9rem 0.6rem 1.9rem 0;
+}
+
+.c-media__sub-img-container:nth-child(3n) {
+    margin-right: 0;
+}
+
+.c-media--rev .c-media__img-wrapper {
+    margin-left: auto;
+}
+
+.c-media--rev .c-media__body {
+    top: 0;
+    left: 0;
+    width: 43.6%;
+    padding: 0 3.2rem 2.6rem;
+}
+
+.c-media__sub-imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Project ===== */
+/* ----- Header ----- */
+.p-header__logo-wrapper {
+    height: 90px;
+    background: #30373b;
+}
+
+.p-header__nav-wrapper {
+    background: #4e4e4e;
+    position: relative;
+}
+
+.p-header__inner {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.p-header__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.p-header__nav-item {
+    display: inline-block;
+    flex: 1;
+    color: #eee;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+
+.p-header__nav-item:hover {
+    background-color: #eee;
+}
+
+.p-header__nav-link {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 1.6rem;
+    transition: all .3s ease-out;
+}
+
+.p-header__nav-item:hover > .p-header__nav-link {
+    color: #4e4e4e;
+}
+
+/* ----- mega-dropdown ----- */
+.p-mega-dropdown {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    background-color: rgba(238, 238, 238, 0.8);
+    padding: 2.8rem 0;
+    z-index: 1;
+    transition: all .3s ease-out;
+    cursor: default;
+}
+
+.p-header__nav-item:hover > .p-mega-dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.p-mega-dropdown__inner {
+    position: relative;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.p-mega-dropdown__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p-mega-dropdown__item {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.p-mega-dropdown__item:last-child {
+    margin-bottom: 0;
+}
+
+.p-mega-dropdown__figure {
+    position: relative;
+    overflow: hidden;
+    width: 246px;
+    height: auto;
+    object-fit: cover;
+    border: solid 1px #000;
+}
+
+.p-mega-dropdown__figure:before{
+    content: '';
+    position: absolute;
+    top: 80%;
+    right: 0;
+    bottom: -30%;
+    left: 0;
+    transform-origin: 0 30%;
+    transform: skewY(-3deg);
+    background-color: rgba(0,0,0,0.7);
+}
+
+.p-mega-dropdown__category {
+    width: 100%;
+    position: absolute;
+    bottom: 3.5%;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.p-mega-dropdown__search-container {
+    position: absolute;
+    bottom: 19%;
+    right: 0;
+    overflow: hidden;
+  }
+  .p-mega-dropdown__search-label {
+      color: #666;
+      font-size: 1.6rem;
+      margin-right: 1.3rem;
+  }
+  .p-mega-dropdown__search-input {
+      width: 520px;
+      height: 40px;
+      font-size: 1.6rem;
+  }
+  .p-mega-dropdown__search-input:focus {
+    outline: 0;
+  }
+  .p-mega-dropdown__search-submit{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    border: none;
+    width: 40px;
+    height: 40px;
+    outline : none;
+    background-image: url(../img/search-logo.jpg);
+  }
+
+  .p-mega-dropdown__logo-wrapper {
+      position: absolute;
+  }
+  
+
+/* ----- Main ----- */
+.p-main-visual {
+    max-width: 1200px;
+    height: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.p-main-visual__img {
+    background: url(../img/main_image.jpg) center / cover;
+    object-fit: cover;
+    width: 1200px;
+    height: 100%;
+}
+
+/* ----- Concept ----- */
+.p-concept {
+    text-align: center;
+}
+
+.p-concept__message {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-top: 4.5rem;
+}
+
+.p-concept__title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.p-concept__heading {
+    position: relative;
+    font-size: 4rem;
+    font-weight: 600;
+    padding: 0 28px;
+    line-height: 1;
+}
+
+.p-concept__heading:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 39px;
+    background-color: #444;
+    top: 0;
+    right: 0;
+}
+
+.p-concept__title {
+    font-size: 3rem;
+    padding-left: 41px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.p-concept__caption {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.p-concept__text {
+    font-size: 1.33rem;
+    font-weight: 300;
+    line-height: 2.0;
+}
+
+.p-concept__text:first-child {
+    margin-top: 0.5rem;
+}
+
+/* ----- pagetop ----- */
+
+.p-pagetop {
+    position: absolute;
+    bottom: -110px;
+    right: 0.7%;
+}
+
+/* ----- footer ----- */
+.p-footer {
+    margin-top: 13rem;
+    height: 860px;
+    background-color: #666;
+}
+
+/* ===== Utility ===== */
+/* ----- display ----- */
+.u-db {
+    display: block;
+}
